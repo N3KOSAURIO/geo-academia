@@ -3,157 +3,760 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Academia · Geo Emprender — maqueta</title>
-<meta name="description" content="Maqueta de la academia de trading del profesor Geovany Angarita: cuatro pantallas, dos temas.">
+<title>Academia Geo · Aprende a operar, no a apostar</title>
+<meta name="description" content="Programa de formación en trading de Geovany Angarita: 8 módulos, 12 semanas, sesiones en vivo, canal de señales con razonamiento, asesorías 1 a 1 y tu plan de trading. Cohorte 1 inicia el 19 de enero de 2027.">
+<meta name="theme-color" content="#07090C">
+<link rel="canonical" href="https://geoemprender.biolnk.si/">
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="Academia · Geo Emprender — maqueta">
-<meta property="og:description" content="Cuatro pantallas de la academia: portada, filtro, programa y aula del alumno.">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Academia Geo">
+<meta property="og:title" content="Academia Geo · Aprende a operar, no a apostar">
+<meta property="og:description" content="8 módulos, 12 semanas y un plan de trading propio. Cohorte 1 inicia el 19 de enero de 2027.">
+<meta property="og:url" content="https://geoemprender.biolnk.si/">
 <meta property="og:image" content="https://geoemprender.biolnk.si/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23050709'/><circle cx='16' cy='16' r='7' fill='none' stroke='%23EFB300' stroke-width='2.5'/></svg>">
-<style>
-  :root{
-    --bg:#05070A; --panel:#0B0F14; --line:#1E262F; --line2:#2A343F;
-    --ink:#F2F3F5; --ink2:#C3C8CF; --muted:#8C949E; --dim:#7F8791;
-    --gold:#EFB300; --gold-ink:#FFC928; --on-gold:#1A1400;
-    --r:14px;
+<meta name="twitter:title" content="Academia Geo · Aprende a operar, no a apostar">
+<meta name="twitter:description" content="8 módulos, 12 semanas y un plan de trading propio. Cohorte 1 inicia el 19 de enero de 2027.">
+<meta name="twitter:image" content="https://geoemprender.biolnk.si/og.png">
+
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Academia Geo · Programa de formación en trading",
+  "description": "Programa de 8 módulos y 12 semanas para pasar de principiante a operador con método: lectura del precio, gestión del riesgo, sistema propio, bitácora y plan de trading.",
+  "inLanguage": "es",
+  "url": "https://geoemprender.biolnk.si/",
+  "provider": {
+    "@type": "Person",
+    "name": "Geovany Angarita",
+    "url": "https://www.instagram.com/geo_emprender_/"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "startDate": "2027-01-19",
+    "endDate": "2027-04-06",
+    "courseWorkload": "PT5H"
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--bg);color:var(--ink);
-    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-
-  header{position:sticky;top:0;z-index:10;background:rgba(5,7,10,.88);
-    backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .bar{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:14px;letter-spacing:-.01em}
-  .brand .ring{width:34px;height:34px;border-radius:50%;border:2px solid var(--gold);
-    box-shadow:0 0 0 4px rgba(239,179,0,.10);display:grid;place-items:center;flex:0 0 auto}
-  .brand .ring span{font-size:11px;font-weight:800;color:var(--gold-ink);letter-spacing:.02em}
-  .brand small{display:block;font-size:9px;font-weight:600;letter-spacing:.18em;color:var(--dim);margin-top:2px}
-  .spacer{flex:1 1 auto}
-  .seg{display:flex;gap:3px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px}
-  .seg button{border:0;background:transparent;color:var(--ink2);font:inherit;font-size:12.5px;font-weight:600;
-    padding:7px 15px;border-radius:999px;cursor:pointer;transition:background .15s,color .15s}
-  .seg button:hover{color:var(--ink)}
-  .seg button[aria-pressed="true"]{background:var(--gold);color:var(--on-gold)}
-  .open{font-size:12.5px;font-weight:600;color:var(--ink2);border:1px solid var(--line2);
-    border-radius:999px;padding:8px 14px;white-space:nowrap;transition:border-color .15s,color .15s}
-  .open:hover{border-color:var(--gold);color:var(--gold-ink)}
-
-  .lead{max-width:1180px;margin:0 auto;padding:26px 20px 6px}
-  .lead .kick{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--gold-ink);text-transform:uppercase}
-  .lead h1{font-size:clamp(21px,3.1vw,30px);line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:9px;max-width:20ch}
-  .lead p{font-size:13.5px;line-height:1.55;color:var(--muted);margin-top:10px;max-width:62ch}
-
-  .stage{max-width:1180px;margin:18px auto 0;padding:0 20px}
-  .frame-wrap{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--r);
-    background:var(--panel);box-shadow:0 24px 60px -30px rgba(0,0,0,.9)}
-  iframe{display:block;width:1440px;height:5288px;border:0;transform-origin:top left;background:#fff}
-
-  .mobile{display:none;max-width:1180px;margin:16px auto 0;padding:0 20px;gap:10px;flex-direction:column}
-  .mobile a{display:block;padding:16px 18px;border:1px solid var(--line2);border-radius:12px;
-    background:var(--panel);font-size:13.5px;font-weight:600}
-  .mobile a span{display:block;font-size:11px;font-weight:500;color:var(--dim);margin-top:4px}
-
-  footer{max-width:1180px;margin:0 auto;padding:26px 20px 54px;display:flex;gap:16px;
-    align-items:baseline;justify-content:space-between;flex-wrap:wrap;
-    border-top:1px solid var(--line);margin-top:30px}
-  footer p{font-size:11.5px;line-height:1.6;color:var(--dim);max-width:64ch}
-  footer .sig{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink);font-weight:700}
-
-  @media (max-width:820px){
-    .stage,.frame-wrap{display:none}
-    .mobile{display:flex}
-    .open{display:none}
-  }
-</style>
+}
+</script>
 </head>
 <body>
 
-<header>
-  <div class="bar">
-    <a class="brand" href="/">
-      <span class="ring"><span>GA</span></span>
-      <span>Geo Emprender<small>Academia</small></span>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Academia Geo, inicio">
+      <span class="mark" aria-hidden="true">G</span>
+      <span class="txt">
+        <span class="name">Academia Geo</span>
+        <span class="sub">Geovany Angarita</span>
+      </span>
     </a>
-    <span class="spacer"></span>
-    <div class="seg" role="group" aria-label="Tema de la maqueta">
-      <button id="b-oscuro" aria-pressed="true">Oscuro</button>
-      <button id="b-claro" aria-pressed="false">Claro</button>
+
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#programa">El programa</a>
+      <a href="#ruta">La ruta</a>
+      <a href="#aula">El aula</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="#aplicar">Aplicar</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+        <span></span>
+      </button>
     </div>
-    <a class="open" id="abrir" href="oscuro.html" target="_blank" rel="noopener">Abrir en pestaña ↗</a>
   </div>
 </header>
 
-<section class="lead">
-  <p class="kick">Maqueta de trabajo</p>
-  <h1>La academia, en cuatro pantallas</h1>
-  <p>Portada, el filtro de entrada, el programa y el aula del alumno. Mismo contenido en dos paletas: negro con oro, o papel cálido. Ningún dato de mercado es real y las cifras están por confirmar.</p>
-</section>
-
-<div class="stage">
-  <div class="frame-wrap" id="wrap">
-    <iframe id="frame" src="oscuro.html" title="Maqueta de la academia" loading="eager"></iframe>
-  </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#programa">El programa</a>
+  <a href="#ruta">La ruta</a>
+  <a href="#aula">El aula</a>
+  <a href="#preguntas">Preguntas</a>
+  <a class="btn btn-gold" href="#aplicar">Aplicar a la cohorte 1</a>
 </div>
 
-<nav class="mobile">
-  <a href="oscuro.html">Ver maqueta en tema oscuro<span>Negro con oro · 4 pantallas</span></a>
-  <a href="claro.html">Ver maqueta en tema claro<span>Papel cálido · 4 pantallas</span></a>
-</nav>
+<main id="main">
 
-<footer>
-  <p>Documento de trabajo para revisión del cliente. No es el sitio final: la paleta, el nombre, el precio y las fechas de la cohorte siguen en decisión.</p>
-  <span class="sig">Ney Agency</span>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="chip"><b>Cohorte 1</b> Inicia el 19 de enero de 2027</span>
+
+      <h1>Aprende a <em>operar</em>.<br>No a apostar.</h1>
+
+      <p class="lead">
+        Ocho módulos y doce semanas para pasar de la intuición al método: cómo se lee el precio,
+        cómo se protege el capital y cómo se escribe un plan que puedas repetir mañana, con mercado en contra.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#programa">
+          Ver el programa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="https://wa.me/573209630286?text=Hola%20Geo%2C%20quiero%20informaci%C3%B3n%20de%20la%20cohorte%201%20de%20la%20academia." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.56 3.74 1.52 5.26L2 22l5.06-1.66a9.8 9.8 0 0 0 4.98 1.36c5.44 0 9.84-4.4 9.84-9.84S17.48 2 12.04 2Zm5.72 13.9c-.24.68-1.4 1.3-1.94 1.36-.54.06-1.02.1-1.9-.24-.88-.34-2.4-1.1-3.7-2.72-1.14-1.42-1.42-2.44-1.5-2.9-.08-.46.14-1.02.4-1.32.26-.3.58-.36.78-.36.2 0 .4.02.58.02.18 0 .44-.06.66.5.24.6.78 1.9.84 2.04.06.14.1.3.02.48-.08.18-.16.3-.3.46-.14.16-.3.36-.42.48-.14.14-.28.3-.12.58.16.28.72 1.18 1.54 1.9 1.06.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.08.16-.2.7-.82.88-1.1.18-.28.36-.24.6-.14.24.1 1.52.72 1.78.86.26.14.44.2.5.32.06.12.06.68-.18 1.36Z"/></svg>
+          Hablar con Geo
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><div class="n">8 <span>módulos</span></div><div class="l">Principiante a operador</div></div>
+        <div class="stat"><div class="n">12 <span>semanas</span></div><div class="l">19 ene – 6 abr 2027</div></div>
+        <div class="stat"><div class="n">2 <span>en vivo</span></div><div class="l">Sesiones por semana</div></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <figure class="hero-photo">
+        <img src="assets/img/hero-toro-oso.webp" width="493" height="740" alt="Escultura dorada de toro y oso frente a una gráfica de mercado" fetchpriority="high" decoding="async">
+        <span class="tag">Formación, no apuestas</span>
+      </figure>
+
+      <div class="plan-card" aria-label="Ejemplo de plan de trading">
+        <div class="pc-head">
+          <div>
+            <div class="pc-title">Tu plan de trading</div>
+            <div class="pc-sub">Reglas escritas antes de entrar</div>
+          </div>
+          <span class="pc-badge">Ejemplo</span>
+        </div>
+        <dl class="pc-rows">
+          <div class="pc-row"><dt>Riesgo por operación</dt><dd class="gold">0,5 %</dd></div>
+          <div class="pc-row"><dt>Operaciones por día</dt><dd>Máximo 2</dd></div>
+          <div class="pc-row"><dt>Relación mínima</dt><dd>1 : 2</dd></div>
+          <div class="pc-row"><dt>Pérdida máxima del día</dt><dd>−1,5 %</dd></div>
+        </dl>
+        <p class="pc-foot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+          El entregable final del programa
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BANDA ============ -->
+<section class="band" aria-label="Frase de Geovany Angarita">
+  <img src="assets/img/banda-oro.webp" alt="" loading="lazy" decoding="async">
+  <div class="wrap">
+    <figure class="quote">
+      <blockquote>El mercado no premia al que sabe más.<br>Premia al que <em>repite bien lo simple</em>.</blockquote>
+      <figcaption>Geovany Angarita · trader y formador</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ NO ES / SÍ ES ============ -->
+<section class="sec bordered" id="no-es">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El filtro de entrada</span>
+      <h2>Esto no es un curso de señales.</h2>
+      <p class="lead">
+        La mayoría de la gente no pierde por falta de información: pierde por falta de proceso.
+        Antes de pagar, mira exactamente qué vas a recibir y qué no.
+      </p>
+    </div>
+
+    <div class="split">
+      <div>
+        <div class="col-head">
+          <span class="badge no" aria-hidden="true">✕</span>
+          <span class="t">Lo que no es</span>
+        </div>
+        <div class="stack">
+          <div class="note is-no">
+            <h3>No es una sala de señales</h3>
+            <p>Existe un canal de señales, pero llega con el razonamiento y la gestión. Copiar sin entender no se sostiene.</p>
+          </div>
+          <div class="note is-no">
+            <h3>No es una fórmula mágica</h3>
+            <p>Nadie puede garantizar rentabilidad. No publicamos resultados prometidos ni «cuentas que doblan».</p>
+          </div>
+          <div class="note is-no">
+            <h3>No es contenido para acumular</h3>
+            <p>No vas a ver 40 horas de video y nada más. Cada módulo cierra con un entregable que se revisa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-head">
+          <span class="badge yes" aria-hidden="true">✓</span>
+          <span class="t">Lo que sí es</span>
+        </div>
+        <div class="stack">
+          <div class="note is-yes">
+            <h3>Un método, no una opinión</h3>
+            <p>Lectura del precio, gestión del riesgo y un sistema con reglas que puedes probar y corregir con datos.</p>
+          </div>
+          <div class="note is-yes">
+            <h3>Acompañamiento real</h3>
+            <p>Sesiones en vivo dos veces por semana, comunidad privada, canal de señales y dos asesorías 1 a 1 por persona.</p>
+          </div>
+          <div class="note is-yes">
+            <h3>Un plan con tu nombre</h3>
+            <p>Terminas con tu plan de trading escrito, tu bitácora y una versión en demo que ya probaste antes de arriesgar dinero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMA ============ -->
+<section class="sec bordered" id="programa">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El programa</span>
+      <h2>Siete piezas que trabajan juntas.</h2>
+      <p class="lead">
+        No es un video suelto: es una cohorte con fechas. El contenido se estudia,
+        la práctica se revisa y la duda se responde en la misma semana en que aparece.
+      </p>
+    </div>
+
+    <div class="pieces">
+      <article class="piece">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2.5"/><path d="M8 21h8M12 18v3M10 9.5v3l4-1.5-4-1.5Z"/></svg></div>
+        <span class="kicker">Contenido</span>
+        <h3>8 módulos en video</h3>
+        <p>Lecciones cortas, de menos de 15 minutos, con ejercicios sobre gráficas reales. Sin relleno.</p>
+      </article>
+
+      <article class="piece">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <span class="kicker">En vivo</span>
+        <h3>Sesiones dos veces por semana</h3>
+        <p>Doce semanas acompañando la cohorte: resolución de dudas, análisis de mercado y revisión de bitácoras. Todas quedan grabadas.</p>
+      </article>
+
+      <article class="piece">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+        <span class="kicker">Mentalidad</span>
+        <h3>Masterclass de psicotrading</h3>
+        <p>Sesgo, FOMO, venganza y aburrimiento: los cuatro enemigos que no aparecen en los gráficos.</p>
+      </article>
+
+      <article class="piece">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M17 11.5a3 3 0 1 0 0-6M18.5 20c0-2.6-1-4.2-2.7-5"/></svg></div>
+        <span class="kicker">Comunidad</span>
+        <h3>Comunidad privada</h3>
+        <p>El grupo donde se comparten operaciones propias, se preguntan dudas sin pena y se corrige entre pares.</p>
+      </article>
+
+      <article class="piece">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 3 5-7 4 5"/><path d="M3 21h18"/></svg></div>
+        <span class="kicker">Mercado</span>
+        <h3>Canal de señales con razonamiento</h3>
+        <p>Cada señal entra con contexto, zona, invalidación y gestión. El objetivo es que aprendas a leerla, no a obedecerla.</p>
+      </article>
+
+      <article class="piece">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M8 5V3M16 5V3M3 10h18M8 15h4"/></svg></div>
+        <span class="kicker">Acompañamiento</span>
+        <h3>Dos asesorías 1 a 1</h3>
+        <p>Una al empezar, para ajustar tu punto de partida, y otra al cerrar, para revisar tu plan y tu bitácora.</p>
+      </article>
+
+      <article class="piece wide">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h4"/></svg></div>
+        <div>
+          <span class="kicker">Entregable final</span>
+          <h3>Tu plan de trading, escrito y probado</h3>
+          <p>
+            Al terminar la cohorte no te llevas apuntes: te llevas un documento con tus reglas de entrada,
+            tamaño de posición, límites de pérdida, horario y criterios para escalar. Revisado uno a uno antes de la última semana.
+          </p>
+          <div class="meta">
+            <span class="pill gold">Revisión 1 a 1</span>
+            <span class="pill">Bitácora incluida</span>
+            <span class="pill">8 módulos · 12 semanas</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RUTA ============ -->
+<section class="sec bordered" id="ruta">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">La ruta</span>
+      <h2>Ocho módulos, en orden y con fechas.</h2>
+      <p class="lead">
+        Cada módulo dura entre una y dos semanas y cierra con un entregable.
+        Los tres primeros son la base: sin ellos, operar es adivinar.
+      </p>
+    </div>
+
+    <div class="route">
+      <article class="route-row">
+        <div class="route-num"><i></i>M01</div>
+        <div><h3>Cómo funciona el mercado</h3></div>
+        <div>
+          <p>Qué se mueve, quién lo mueve y por qué. Activos, brókers, sesiones, liquidez, spreads y tipos de orden. El mapa antes de caminar.</p>
+          <span class="route-phase">Fase <b>Fundamentos</b></span>
+        </div>
+      </article>
+
+      <article class="route-row">
+        <div class="route-num"><i></i>M02</div>
+        <div><h3>Lectura del precio</h3></div>
+        <div>
+          <p>Velas japonesas, estructura, tendencia y zonas de interés. Aprender a describir el gráfico sin adjetivos: dónde está el precio y hacia dónde respira.</p>
+          <span class="route-phase">Fase <b>Fundamentos</b></span>
+        </div>
+      </article>
+
+      <article class="route-row">
+        <div class="route-num"><i></i>M03</div>
+        <div><h3>Gestión del riesgo</h3></div>
+        <div>
+          <p>Tamaño de posición, relación riesgo-beneficio, drawdown y esperanza matemática. La clase que decide si sigues en el mercado dentro de un año.</p>
+          <span class="route-phase">Fase <b>Fundamentos</b></span>
+        </div>
+      </article>
+
+      <article class="route-row">
+        <div class="route-num"><i></i>M04</div>
+        <div><h3>Sistema de entrada y salida</h3></div>
+        <div>
+          <p>Un setup claro: condición, gatillo, stop, objetivo y checklist previo. Si no se puede escribir en cinco líneas, no es un sistema.</p>
+          <span class="route-phase">Fase <b>Sistema</b></span>
+        </div>
+      </article>
+
+      <article class="route-row">
+        <div class="route-num"><i></i>M05</div>
+        <div><h3>Psicología y disciplina</h3></div>
+        <div>
+          <p>Sesgos, impulsos y rutinas. Cómo se prepara una sesión, cómo se cierra y qué se hace después de una pérdida o de una racha buena.</p>
+          <span class="route-phase">Fase <b>Sistema</b></span>
+        </div>
+      </article>
+
+      <article class="route-row">
+        <div class="route-num"><i></i>M06</div>
+        <div><h3>Bitácora y estadística</h3></div>
+        <div>
+          <p>Registrar para poder medir: porcentaje de acierto, promedio R, rachas y errores repetidos. Lo que no se anota, no se corrige.</p>
+          <span class="route-phase">Fase <b>Sistema</b></span>
+        </div>
+      </article>
+
+      <article class="route-row">
+        <div class="route-num"><i></i>M07</div>
+        <div><h3>Backtest y prueba en demo</h3></div>
+        <div>
+          <p>Veinte operaciones históricas y veinte en demo, con las mismas reglas. Aquí el sistema deja de ser una idea y pasa a tener números.</p>
+          <span class="route-phase">Fase <b>Validación</b></span>
+        </div>
+      </article>
+
+      <article class="route-row">
+        <div class="route-num"><i></i>M08</div>
+        <div><h3>Plan de trading y salida a real</h3></div>
+        <div>
+          <p>Escritura final del plan, capital mínimo, criterios para pasar de demo a real y cómo se escala sin romper las reglas.</p>
+          <span class="route-phase">Fase <b>Validación</b></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AULA ============ -->
+<section class="sec bordered" id="aula">
+  <div class="wrap aula-grid">
+    <div>
+      <span class="eyebrow">El aula</span>
+      <h2 style="margin-top:18px">Tu progreso, tus reglas y tu bitácora en un solo lugar.</h2>
+      <p class="lead" style="margin-top:18px">
+        Cada semana se abre el módulo que toca. Ves lo que falta, lo que ya cerraste y la próxima sesión en vivo,
+        sin buscar en diez chats distintos.
+      </p>
+
+      <ul class="aula-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Módulos con entregable.</b> Cada cierre pide un ejercicio concreto y queda marcado cuando lo entregas.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Bitácora de operaciones.</b> Registras par, dirección, resultado en R y la nota de por qué entraste.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Señales con contexto.</b> Cada una llega con zona, invalidación y tamaño sugerido según tu plan, no una captura suelta.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Agenda de la cohorte.</b> Próxima sesión, grabaciones y fechas de asesoría, siempre a mano.</span>
+        </li>
+      </ul>
+
+      <p class="demo-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+        El aula abre el 19 de enero de 2027, junto con la cohorte 1.
+      </p>
+    </div>
+
+    <div>
+      <div class="app-frame">
+        <div class="app-bar">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="url">Aula · cohorte 1</span>
+        </div>
+        <div class="app-body">
+          <div class="app-hello">
+            <div class="who">
+              <span class="avatar" aria-hidden="true">TÚ</span>
+              <div>
+                <div class="nm">Tu recorrido</div>
+                <div class="st">8 módulos · 12 semanas</div>
+              </div>
+            </div>
+            <span class="live-dot">Semana 3</span>
+          </div>
+
+          <div class="app-progress">
+            <div class="lbl"><span>Progreso de la cohorte</span><b>3 de 8 módulos</b></div>
+            <div class="track"><i style="width:37.5%"></i></div>
+          </div>
+
+          <div class="app-cards">
+            <div class="app-card">
+              <div class="k">Bitácora</div>
+              <div class="big">Tus últimas operaciones</div>
+              <div class="row"><span class="pair">EUR/USD <span class="tag-side long">COMPRA</span></span><span class="num">+2,0 R</span></div>
+              <div class="row"><span class="pair">XAU/USD <span class="tag-side short">VENTA</span></span><span class="num">−1,0 R</span></div>
+              <div class="row"><span class="pair">GBP/USD <span class="tag-side long">COMPRA</span></span><span class="num">+1,5 R</span></div>
+              <div class="sm">Promedio: +0,8 R por operación</div>
+            </div>
+
+            <div class="app-card">
+              <div class="k">Próxima sesión</div>
+              <div class="big">Revisión de bitácoras</div>
+              <div class="sm">En vivo · queda grabada</div>
+              <div class="app-mod done"><span class="n">1</span> Cómo funciona el mercado</div>
+              <div class="app-mod done"><span class="n">2</span> Lectura del precio</div>
+              <div class="app-mod now"><span class="n">3</span> Gestión del riesgo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APLICAR ============ -->
+<section class="sec bordered" id="aplicar">
+  <div class="wrap apply-grid">
+    <div>
+      <span class="eyebrow">Admisión</span>
+      <h2 style="margin-top:18px">Entrar a la cohorte 1.</h2>
+      <p class="lead" style="margin-top:18px">
+        No es un carrito de compras: es una conversación corta para confirmar que el programa
+        encaja con tu punto de partida. Si no encaja, te lo decimos.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="s-n">1</span>
+          <div>
+            <h4>Cuentas dónde estás</h4>
+            <p>Si nunca operaste o si llevas dos años perdiendo con el mismo patrón, cambia el punto de entrada.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="s-n">2</span>
+          <div>
+            <h4>Hablamos por WhatsApp</h4>
+            <p>Quince minutos: qué incluye, cómo se paga y qué se espera de ti durante las doce semanas.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="s-n">3</span>
+          <div>
+            <h4>Quedas dentro de la cohorte</h4>
+            <p>Recibes el acceso al aula, el calendario de sesiones y la fecha de tu primera asesoría 1 a 1.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Cuéntame tu caso</h3>
+      <p class="hint">Se abre WhatsApp con tu mensaje listo. No guardamos datos en esta página.</p>
+
+      <form class="form" id="applyForm" novalidate>
+        <div class="f-row">
+          <div class="field">
+            <label for="f-name">Nombre</label>
+            <input id="f-name" name="nombre" type="text" placeholder="Cómo te llamas" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">WhatsApp</label>
+            <input id="f-phone" name="whatsapp" type="tel" placeholder="+57 300 000 0000" autocomplete="tel" inputmode="tel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-exp">Tu experiencia operando</label>
+          <select id="f-exp" name="experiencia" required>
+            <option value="">Elige una opción</option>
+            <option>Nunca he operado</option>
+            <option>Menos de un año</option>
+            <option>Entre uno y tres años</option>
+            <option>Más de tres años</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-goal">¿Qué quieres resolver? <span class="opt">(opcional)</span></label>
+          <textarea id="f-goal" name="objetivo" placeholder="Ej: dejo de respetar el stop cuando voy perdiendo."></textarea>
+        </div>
+
+        <p class="form-err" id="formErr" role="alert"></p>
+
+        <button class="btn btn-gold btn-block" type="submit">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.56 3.74 1.52 5.26L2 22l5.06-1.66a9.8 9.8 0 0 0 4.98 1.36c5.44 0 9.84-4.4 9.84-9.84S17.48 2 12.04 2Zm5.72 13.9c-.24.68-1.4 1.3-1.94 1.36-.54.06-1.02.1-1.9-.24-.88-.34-2.4-1.1-3.7-2.72-1.14-1.42-1.42-2.44-1.5-2.9-.08-.46.14-1.02.4-1.32.26-.3.58-.36.78-.36.2 0 .4.02.58.02.18 0 .44-.06.66.5.24.6.78 1.9.84 2.04.06.14.1.3.02.48-.08.18-.16.3-.3.46-.14.16-.3.36-.42.48-.14.14-.28.3-.12.58.16.28.72 1.18 1.54 1.9 1.06.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.08.16-.2.7-.82.88-1.1.18-.28.36-.24.6-.14.24.1 1.52.72 1.78.86.26.14.44.2.5.32.06.12.06.68-.18 1.36Z"/></svg>
+          Enviar por WhatsApp
+        </button>
+
+        <p class="form-note">
+          La inversión y las opciones de pago se comparten en esa conversación.<br>
+          ¿Prefieres escribir directo? <a href="https://wa.me/573209630286" target="_blank" rel="noopener" style="color:var(--gold-2)">+57 320 963 0286</a>
+        </p>
+
+        <div class="form-ok" id="formOk" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="preguntas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Preguntas</span>
+      <h2>Lo que preguntan antes de pagar.</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>¿Necesito experiencia previa?</summary>
+        <div class="a"><p>No. Los módulos 1 a 3 arrancan desde cero: qué es un par, cómo se lee una vela, cómo se calcula el tamaño de una posición. Si ya operas, la asesoría inicial sirve para saltar lo que dominas y entrar en el módulo 4.</p></div>
+      </details>
+
+      <details>
+        <summary>¿Cuánto tiempo me va a pedir por semana?</summary>
+        <div class="a"><p>Entre cuatro y seis horas: video corto, dos sesiones en vivo y la práctica del entregable. La cohorte tiene fechas, así que conviene tener ese margen antes de inscribirse.</p></div>
+      </details>
+
+      <details>
+        <summary>¿Necesito capital para empezar?</summary>
+        <div class="a"><p>No. La práctica de los módulos 5 a 7 se hace en cuenta demo, con las mismas reglas que usarías en real. Cuando llegue el momento de operar dinero, la regla es simple: solo lo que puedas perder sin que cambie tu vida.</p></div>
+      </details>
+
+      <details>
+        <summary>¿Garantizan ganancias?</summary>
+        <div class="a"><p>No, y desconfía de quien lo prometa. El programa enseña proceso, lectura del mercado y gestión del riesgo. El resultado depende de tu disciplina, tu capital y las condiciones del mercado; operar implica riesgo de pérdida.</p></div>
+      </details>
+
+      <details>
+        <summary>¿Cuánto cuesta y cómo se paga?</summary>
+        <div class="a"><p>La inversión de la cohorte 1 y las opciones de pago se comparten en la conversación de admisión por WhatsApp. Preferimos explicarlo ahí antes que publicar un precio que no cuente tu punto de partida.</p></div>
+      </details>
+
+      <details>
+        <summary>¿Y si no puedo asistir a las sesiones en vivo?</summary>
+        <div class="a"><p>Todas quedan grabadas y disponibles en el aula. Las asesorías 1 a 1 se agendan en horarios distintos para que puedas cuadrarlas con tu trabajo.</p></div>
+      </details>
+
+      <details>
+        <summary>¿Esto es asesoría de inversión?</summary>
+        <div class="a"><p>No. Es formación educativa. La academia no gestiona dinero de terceros, no administra portafolios y no da recomendaciones personalizadas de compra o venta.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow plain">Cohorte 1 · 19 de enero de 2027</span>
+    <h2 style="margin-top:20px">Doce semanas para dejar de improvisar.</h2>
+    <p>Si vas a operar de todas formas, hazlo con un método escrito, un límite de pérdida y alguien que te corrija la bitácora.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#aplicar">
+        Aplicar a la cohorte 1
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="https://wa.me/573209630286?text=Hola%20Geo%2C%20tengo%20una%20duda%20sobre%20la%20academia." target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="mark" aria-hidden="true">G</span>
+          <span class="txt">
+            <span class="name">Academia Geo</span>
+            <span class="sub">Geovany Angarita</span>
+          </span>
+        </a>
+        <p class="tagline">Formación en trading con método: lectura del precio, gestión del riesgo y un plan que se puede repetir.</p>
+      </div>
+
+      <div>
+        <h5>Programa</h5>
+        <ul>
+          <li><a href="#programa">Qué incluye</a></li>
+          <li><a href="#ruta">Los 8 módulos</a></li>
+          <li><a href="#aula">El aula</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="https://wa.me/573209630286" target="_blank" rel="noopener">WhatsApp +57 320 963 0286</a></li>
+          <li><a href="https://www.instagram.com/geo_emprender_/" target="_blank" rel="noopener">Instagram @geo_emprender_</a></li>
+          <li><a href="https://www.threads.net/@geo_emprender_" target="_blank" rel="noopener">Threads</a></li>
+          <li><a href="https://www.facebook.com/geoemprender" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Cohorte</h5>
+        <ul>
+          <li><a href="#aplicar">Aplicar</a></li>
+          <li><a href="#ruta">Calendario</a></li>
+          <li><a href="#preguntas">Cómo se paga</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="legal">
+      <p class="risk">
+        <b>Riesgo:</b> operar en mercados financieros implica riesgo de pérdida de capital.
+        Este programa es formativo y no constituye asesoría de inversión ni gestión de portafolios.
+        Resultados pasados no garantizan resultados futuros.
+      </p>
+      <p>© <span id="year">2026</span> Academia Geo · Geovany Angarita</p>
+    </div>
+  </div>
 </footer>
 
 <script>
-(function(){
-  var frame=document.getElementById('frame'), wrap=document.getElementById('wrap');
-  var bO=document.getElementById('b-oscuro'), bC=document.getElementById('b-claro'), abrir=document.getElementById('abrir');
-  var H={oscuro:5288, claro:5101};
+(function () {
+  'use strict';
 
-  // alto real del contenido: se suman las pantallas, que tienen alto fijo
-  function measure(){
-    var h=0;
-    try{
-      var d=frame.contentDocument, b=d.body;
-      var secs=d.querySelectorAll('.screen');
-      for(var i=0;i<secs.length;i++) h+=secs[i].getBoundingClientRect().height;
-      if(secs.length){
-        var bm=parseFloat(getComputedStyle(secs[secs.length-1]).marginBottom)||0;
-        h=Math.ceil(h+bm+(parseFloat(getComputedStyle(b).paddingBottom)||0));
-      }
-    }catch(e){}
-    return (h>800)?h:3600;
-  }
-  function fit(){
-    var w=wrap.clientWidth||1180, k=w/1440;
-    var h=H[abrir.dataset.tema]||3600;
-    frame.style.height=h+'px';
-    frame.style.transform='scale('+k+')';
-    wrap.style.height=(h*k)+'px';
-  }
-  function set(theme){
-    abrir.dataset.tema=theme;
-    frame.src=theme+'.html';
-    abrir.href=theme+'.html';
-    bO.setAttribute('aria-pressed', String(theme==='oscuro'));
-    bC.setAttribute('aria-pressed', String(theme==='claro'));
-    fit();
-  }
-  bO.addEventListener('click',function(){set('oscuro')});
-  bC.addEventListener('click',function(){set('claro')});
-  window.addEventListener('resize',fit);
-  frame.addEventListener('load',function(){
-    H[abrir.dataset.tema]=measure();
-    fit();
+  /* nav con fondo al hacer scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function () {
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* menú móvil */
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('mobileMenu');
+  var closeMenu = function () {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+  };
+  toggle.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
   });
-  abrir.dataset.tema='oscuro';
-  fit();
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  /* año */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* formulario → WhatsApp (sin backend, sin guardar datos) */
+  var form = document.getElementById('applyForm');
+  var err = document.getElementById('formErr');
+  var ok = document.getElementById('formOk');
+  var WA = '573209630286';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    err.textContent = '';
+    ok.classList.remove('show');
+
+    var name = form.nombre.value.trim();
+    var phone = form.whatsapp.value.replace(/[^\d+]/g, '');
+    var exp = form.experiencia.value;
+    var goal = form.objetivo.value.trim();
+
+    if (name.length < 2) { err.textContent = 'Escribe tu nombre para poder responderte.'; form.nombre.focus(); return; }
+    if (phone.replace(/\D/g, '').length < 8) { err.textContent = 'Ese WhatsApp no parece completo. Revísalo, por favor.'; form.whatsapp.focus(); return; }
+    if (!exp) { err.textContent = 'Elige tu experiencia para ajustar el punto de entrada.'; form.experiencia.focus(); return; }
+
+    var msg = 'Hola Geo, quiero aplicar a la cohorte 1 de la academia.\n\n'
+      + 'Nombre: ' + name + '\n'
+      + 'WhatsApp: ' + phone + '\n'
+      + 'Experiencia: ' + exp
+      + (goal ? '\nQuiero resolver: ' + goal : '');
+
+    var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+    var win = window.open(url, '_blank', 'noopener');
+
+    ok.textContent = win
+      ? 'Abrimos WhatsApp con tu mensaje. Envíalo y te respondemos en el mismo hilo.'
+      : 'Tu navegador bloqueó la ventana. Escríbenos directo al +57 320 963 0286 con estos datos.';
+    ok.classList.add('show');
+    if (!win) { window.location.href = url; }
+  });
+
+  /* aparición suave */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var items = document.querySelectorAll('.sec-head, .piece, .note, .route-row, .step, .app-frame');
+    items.forEach(function (el) { el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    items.forEach(function (el) { io.observe(el); });
+  }
 })();
 </script>
+
 </body>
 </html>

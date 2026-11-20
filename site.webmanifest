@@ -1,0 +1,18 @@
+{
+  "name": "Academia Geo · Geovany Angarita",
+  "short_name": "Academia Geo",
+  "description": "Programa de formación en trading: 8 módulos, 12 semanas y un plan propio.",
+  "lang": "es",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07090C",
+  "theme_color": "#07090C",
+  "icons": [
+    { "src": "favicon-48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

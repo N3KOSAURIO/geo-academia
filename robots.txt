@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://geoemprender.biolnk.si/sitemap.xml
