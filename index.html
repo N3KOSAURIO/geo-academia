@@ -113,29 +113,46 @@
 (function(){
   var frame=document.getElementById('frame'), wrap=document.getElementById('wrap');
   var bO=document.getElementById('b-oscuro'), bC=document.getElementById('b-claro'), abrir=document.getElementById('abrir');
+  var H={oscuro:5288, claro:5101};
 
-  var H=5288;
+  // alto real del contenido: se suman las pantallas, que tienen alto fijo
+  function measure(){
+    var h=0;
+    try{
+      var d=frame.contentDocument, b=d.body;
+      var secs=d.querySelectorAll('.screen');
+      for(var i=0;i<secs.length;i++) h+=secs[i].getBoundingClientRect().height;
+      if(secs.length){
+        var bm=parseFloat(getComputedStyle(secs[secs.length-1]).marginBottom)||0;
+        h=Math.ceil(h+bm+(parseFloat(getComputedStyle(b).paddingBottom)||0));
+      }
+    }catch(e){}
+    return (h>800)?h:3600;
+  }
   function fit(){
-    var w=wrap.clientWidth||1180, k=w/1440, h=H;
+    var w=wrap.clientWidth||1180, k=w/1440;
+    var h=H[abrir.dataset.tema]||3600;
+    frame.style.height=h+'px';
     frame.style.transform='scale('+k+')';
     wrap.style.height=(h*k)+'px';
   }
   function set(theme){
-    frame.src = theme+'.html';
-    abrir.href = theme+'.html';
+    abrir.dataset.tema=theme;
+    frame.src=theme+'.html';
+    abrir.href=theme+'.html';
     bO.setAttribute('aria-pressed', String(theme==='oscuro'));
     bC.setAttribute('aria-pressed', String(theme==='claro'));
+    fit();
   }
   bO.addEventListener('click',function(){set('oscuro')});
   bC.addEventListener('click',function(){set('claro')});
   window.addEventListener('resize',fit);
-  fit();
   frame.addEventListener('load',function(){
-    try{
-      var h=frame.contentDocument.documentElement.scrollHeight;
-      if(h&&h>1800){ H=h; fit(); }
-    }catch(e){}
+    H[abrir.dataset.tema]=measure();
+    fit();
   });
+  abrir.dataset.tema='oscuro';
+  fit();
 })();
 </script>
 </body>
